@@ -13,6 +13,10 @@ from ..models.userModel import User
 from .errorController import AppError
 from app import jwt, bcrypt
 
+"""
+Controllers for all authentication/login/logout related things.
+"""
+
 def login():
     #user = User.findOne({'_id': request.get_json()['_id']}, showHiddenFields=True)
     if (('email' or 'password') not in request.get_json().keys()):

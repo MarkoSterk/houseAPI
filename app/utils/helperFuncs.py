@@ -4,6 +4,18 @@ from flask import current_app
 import os
 from werkzeug.utils import secure_filename
 
+"""
+Helper functions which can be used across the app. 
+
+hashUrlSafe: creates a URL safe hashed string
+
+parseFormData: turns form data (immutableDict) into a normal dictionary. Can be set to skip 
+desired fields.
+
+saveImageFiles: saves image files from a form into the static folder and asignes
+random string names (it keeps the provided extension) but it only accepts provided
+image formats (allowed_formats). Default: allowed_formats=['png', 'jpg', 'jpeg', 'bmp']
+"""
 
 def hashUrlSafe(stringToHash):
     hashed_string = '/'

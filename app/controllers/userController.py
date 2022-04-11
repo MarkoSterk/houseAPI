@@ -10,6 +10,9 @@ from ..utils.email import sendPasswordResetToken
 from ..utils.helperFuncs import hashUrlSafe
 from .factory import deleteOne, getAll, getOne
 
+"""
+Controllers for all user routes
+"""
 
 def getAllUsers():
     return getAll(User, hideFields=['password', 'passwordChangedAt', '_v', 'active'])

@@ -2,6 +2,10 @@ from flask import request, Blueprint, jsonify, current_app
 from flask_jwt_extended import jwt_required
 from ...controllers import userController, authController
 
+"""
+All user routes combined into a blueprint
+"""
+
 userRoutes=Blueprint('userRoutes',__name__)
 
 

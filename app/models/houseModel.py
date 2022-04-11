@@ -1,7 +1,18 @@
 from xmlrpc.client import Boolean, boolean
 from .model import Model
 from app import bcrypt
-from .userModel import User
+
+"""
+Schema of the model object. A dictionary (Schema) with keys corresponding to field names.
+Each field in the Schema is a dictionary with "type", "unique", "required", "default" and "validators" fields.
+type: datatype(str, int, float, list ect...)
+validators: a list of tuples with names and parameters (see model.py and example below)
+"required": boolean (True or False)
+"unique": boolean (True or False). Automatically checks the DB for existing value
+"default": default value for the field if non is provided.
+
+collection = 'house' <-- the desired collection in MongoDB
+"""
 
 class House(Model):
     collection = 'house'

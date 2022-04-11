@@ -4,6 +4,10 @@ from ...controllers import houseController
 from ...controllers.authController import role_required
 
 
+"""
+All house routes combined into a blueprint
+"""
+
 houseRoutes = Blueprint('houseRoutes',__name__)
 
 @houseRoutes.route("/api/v1/houses", methods=['GET'])

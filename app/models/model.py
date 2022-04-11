@@ -1,12 +1,35 @@
-import collections
-from distutils.log import error
-from typing import Collection
 from app import mongo
 from flask import abort, jsonify
 import secrets
 import datetime
 from validate_email import validate_email
-from xmlrpc.client import Boolean, boolean
+from xmlrpc.client import boolean
+
+"""
+Main class from which other data models inherit.
+It includes a set of field validator methods, which can be accessed 
+as shown in the userModel.py and houseModel.py files.
+Available validators are:
+isEmail <-- checks if a string is a valid email address
+checkElementsType <- checks fields inside of lists/arrays for the right type
+minValue <- checks if value is not lower than a set minimum
+maxValue <- checks if value is not larger than a set maximum
+isLength <- checks if variable/field is of a required length
+minLength <- checks if a field has a minimum length
+maxLength <- checks if a field is not larger than a set maximum
+mustMatch <- a field must match another field in the model (ie password and confirm password)
+
+If data types provided to the model are not of the desired type it automatically tries to force
+a conversion. If the acceptable types are in a tuple (ie (int, float)) the last element is enforced.
+
+The model also automatically provides a '_id', '_v' and '_createdAt' field for the inputes.
+'_id': 16 bit random string
+'_v': defaults to 0
+'_createdAt': a datetime string with format "Y-m-d H:M:S"
+
+The Model class has access to the findOne, find, updateOne, deleteOne methods of PyMongo.
+
+"""
 
 class Model:
     collection: str = 'db'

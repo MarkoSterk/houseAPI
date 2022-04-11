@@ -1,6 +1,11 @@
 from flask import jsonify, request, current_app
 from .errorController import AppError
 
+"""
+controller factory for simple operations/routes like 
+getOne, get(All) and deleteOne.
+"""
+
 def getAll(model, hideFields=[]):
     query = model.find({}, hideFields=hideFields)
     return jsonify({

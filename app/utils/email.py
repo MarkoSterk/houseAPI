@@ -3,6 +3,11 @@ from flask import current_app
 from flask_mail import Message
 from app import mail
 
+"""
+Mrthod for sending emails from the app.
+It relies on the sendgrid service.
+Visit https://sendgrid.com/ for more information
+"""
 
 
 def sendPasswordResetToken(recipient, url):

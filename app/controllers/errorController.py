@@ -1,6 +1,14 @@
 from flask import abort, jsonify
 from werkzeug.exceptions import HTTPException
 
+"""
+Error handling controllers.
+
+AppError <- controller for raising/returning predictable app errors
+
+handle_error: overrides the default error responses for all exception codes.
+"""
+
 ##function for raising exception when needed.
 def AppError(msg, statusCode):
     response = jsonify({

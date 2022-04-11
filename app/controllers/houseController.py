@@ -7,6 +7,9 @@ from ..models.userModel import User
 from .factory import getAll, getOne, deleteOne
 from ..utils.helperFuncs import parseFormData, saveImageFiles
 
+"""
+Controllers for all house routes.
+"""
 
 def getAllHouses():
     return getAll(House)
