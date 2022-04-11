@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "4a72f9f7-8a7e-40ba-8285-01921bdebb5a",
+		"name": "houses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all houses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/houses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one house by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/houses/2d99591d2cae5b208fdf34f1d6375658",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"houses",
+						"2d99591d2cae5b208fdf34f1d6375658"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL house by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/houses/8f50f5487d15d549c8761a852228db4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"houses",
+						"8f50f5487d15d549c8761a852228db4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create house",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/home/marko/Documents/Pictures/Screenshot from 2022-01-03 10-39-22.png"
+						},
+						{
+							"key": "title",
+							"value": "A top notch appartment at the heart of the city",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "199.23",
+							"type": "text"
+						},
+						{
+							"key": "bedrooms",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "bathrooms",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "sqft_living",
+							"value": "934.5",
+							"type": "text"
+						},
+						{
+							"key": "sqft_lot",
+							"value": "2100",
+							"type": "text"
+						},
+						{
+							"key": "floors",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "waterfront",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "condition",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "coordinates[0]",
+							"value": "40.1",
+							"type": "text"
+						},
+						{
+							"key": "coordinates[1]",
+							"value": "43.5",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "A very nice apartment walking distance from a cute little lake",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/houses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH house data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/home/marko/Documents/Pictures/Screenshot from 2021-12-17 19-21-25.png",
+								"/home/marko/Documents/Pictures/Screenshot from 2022-02-21 19-16-31.png"
+							]
+						},
+						{
+							"key": "title",
+							"value": "A top notch appartment at the heart of the city",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "bedrooms",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "bathrooms",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sqft_living",
+							"value": "934.5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sqft_lot",
+							"value": "2100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "floors",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "waterfront",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "condition",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "coordinates[0]",
+							"value": "40.1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "coordinates[1]",
+							"value": "43.5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "A very nice apartment walking distance from a cute little lake",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/houses/2d99591d2cae5b208fdf34f1d6375658",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"houses",
+						"2d99591d2cae5b208fdf34f1d6375658"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
