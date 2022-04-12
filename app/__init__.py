@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
 
 from werkzeug.exceptions import default_exceptions
 
@@ -23,6 +24,7 @@ mongo = PyMongo() ##creates mongoDB instance
 bcrypt = Bcrypt() ##creates Bcrypt instance
 jwt = JWTManager() ##creates JSON Web Token Manager instance
 mail = MailSendGrid() ##creates sendgrid instance
+cors = CORS()
 
 def create_app(config_class=Config):
     app=Flask(__name__)
@@ -33,6 +35,7 @@ def create_app(config_class=Config):
     bcrypt.init_app(app)
     jwt.init_app(app)
     mail.init_app(app)
+    cors.init_app(app)
 
     #limiter - prevents flooding of the app with requests
     limiter = Limiter(
