@@ -24,7 +24,7 @@ mongo = PyMongo() ##creates mongoDB instance
 bcrypt = Bcrypt() ##creates Bcrypt instance
 jwt = JWTManager() ##creates JSON Web Token Manager instance
 mail = MailSendGrid() ##creates sendgrid instance
-cors = CORS()
+cors = CORS() #creates CORS instance
 
 def create_app(config_class=Config):
     app=Flask(__name__)
