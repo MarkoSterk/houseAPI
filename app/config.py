@@ -17,6 +17,6 @@ class Config:
     PASS_RESET_TOKEN_DURATION = '600000' ##expiration duration of password reset token
 
     MAIL_SENDGRID_API_KEY='sendgrid_API_key'
-    MAIL_SENDGRID_SENDER='marko_sterk@hotmail.com' ##validated email for sendgrid sender
+    MAIL_SENDGRID_SENDER='sendgrid@email.com' ##validated email for sendgrid sender
 
-    MONGO_URI="mongodb+srv://marko:m314159265S@cluster0.xpomk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_URI="mongoDB-URI"
